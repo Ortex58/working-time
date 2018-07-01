@@ -14,6 +14,7 @@ body {
     background-color: #faf5fd;
 }
 .center {
+    position: relative;
 	text-align: center;
 	max-width: 500px;
 	padding: 20px 10px;
@@ -22,6 +23,7 @@ body {
 	border-radius: 5px;
 }
 .title {
+    margin-top: 50px;
 	font-size: 36px;
 }
 input {
@@ -39,4 +41,15 @@ input {
 #send {
 	cursor: pointer;
 	background: #f1f1f1;
+}
+.hide{
+    display: none;
+}
+@media (max-width: 901px) {
+    .hideFirsrWidget{
+        display: none;
+    }
+    .show{
+        display: block;
+    }
 }
