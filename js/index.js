@@ -1,28 +1,43 @@
+//Функція обрахунку годин та хвилин
+function convert(a){
+	  hours = Math.trunc(a/60);
+	  minutes = a % 60;
+	  console.log(hours +":"+ minutes);
+	}
 var min = document.querySelector('#min'),
-		 send = document.querySelector('#send'),
-		 result = document.querySelector('#hour'),
-		 hour = 60;
+	minutes, hours,	a,
+	send = document.querySelector('#send'),
+	result = document.querySelector('#res'),
+	hour = 60,
+	res = document.querySelector('#res');
+	
 
-		 min.focus();
+min.focus();
 
-		 send.addEventListener('click', function (e) {
-		 	e.preventDefault();
-		 	min.focus();
-		 	min = min.value;
+send.addEventListener('click', function (e) {
+ e.preventDefault();
+ minutes = min.value;
 
-		 	//Рахуємо кількість годин
-			if ( min < 60 ) {
-					result.value = min;
-			} else {
-				for (i=1; i<=24; i++) {
-					s = hour * i;
-					if ( s <= min ) {
-						god = i;
-						hvy = min - s;//Рахуємо кількісто хвилин
-					}
-				}
-				//Вивід результату
-				result.value = god + ':' + hvy;
-				min = document.querySelector('#min');
+ //Рахуємо кількість годин
+if ( minutes < hour ) {
+		return result.value = minutes + ' ' + 'min';
+} else {
+		a = minutes; //Берем значення поля min
+		convert(a); // надаєм фунцкції значення поля мін зі змінної а
+		//Вивід результату
+		if (minutes < 10 ) {
+			result.value = hours + ':' + 0 + minutes;
+		} else {
+			result.value = hours + ':' + minutes;
 			}
-		 });
+	}
+});
+
+
+/*for (i=1; i<=24; i++) {
+	s = hour * i;
+	if ( s <= min ) {
+		god = i;
+		hvy = min - s;//Рахуємо кількісто хвилин
+	}
+}*/
