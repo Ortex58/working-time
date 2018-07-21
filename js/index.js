@@ -10,7 +10,7 @@ var min = document.querySelector('#min'),
 		 result = document.querySelector('#hour'),
 		 hour = 60;
 
-		 min.focus();
+		 //min.focus();
 		 result.value = '0' + ':' + '00';
 
 		 send.addEventListener('click', function (e) {
