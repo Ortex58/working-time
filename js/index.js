@@ -17,7 +17,7 @@ var min = document.querySelector('#min'),
 		 	e.preventDefault();
 		 	minutes = min.value;
  			if (~minutes.indexOf('.') || minutes < 0) {
-			  result.value = 'Error';
+			  result.value = 'Please input a integer type > 0';
 			} else
 		 	//Рахуємо кількість годин
 			if ( minutes < hour ) {
